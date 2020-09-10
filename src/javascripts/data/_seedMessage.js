@@ -31,4 +31,6 @@ const seedArray = [
 
 ];
 
-export default { seedArray };
+const seedData = () => seedArray;
+
+export default { seedData };
