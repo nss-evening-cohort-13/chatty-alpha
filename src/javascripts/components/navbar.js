@@ -1,18 +1,18 @@
 const renderNavbar = () => {
-  const domString = $("#navbarContainer").html(`
+  const domString = $('#navbarContainer').html(`
     <div class="fixed-top">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-      </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+            <img src="https://i.ibb.co/jWYxkc9/futurama.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            Planet Express Chat
+            </a>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Enter message..." aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enter Message</button>
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Clear</button>
+            </form>
+        </nav>
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-  </div>
     `);
 
   return domString;
