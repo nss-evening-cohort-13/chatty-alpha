@@ -1,16 +1,18 @@
 import '../styles/main.scss';
 
 import navbar from './components/navbar';
-import _displayMessages from './components/_displayMessages';
 import seedArray from './data/_seedMessage';
-import _deleteMessage from './components/_deleteMessage';
-// import _clearAllMessages from './components/_clearAllMessages';
+import displayMessages from './components/_displayMessages';
+import addMessage from './components/_addNewMessage';
+import deleteMessage from './components/_deleteMessage';
+import clearAllMessages from './components/_clearAllMessages';
 
 const init = () => {
   navbar.renderNavbar();
-  _displayMessages.displayMessages(seedArray.seedData());
-  // _clearAllMessages.clearMessages();
-  _deleteMessage.deleteMessage(seedArray.seedData());
+  displayMessages.displayMessages(seedArray.seedData());
+  addMessage.keyEvent();
+  clearAllMessages.clearMessages();
+  deleteMessage.deleteMessage(seedArray.seedData());
 };
 
 init();
