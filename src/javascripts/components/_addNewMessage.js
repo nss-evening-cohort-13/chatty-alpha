@@ -17,7 +17,6 @@ const addNewMessage = () => {
   $('#messages').html('');
   displayMessages.displayMessages(seedArray.seedData());
   clearOutInput();
-  console.warn('data', seedArray.seedData());
 };
 
 const keyEvent = () => {
@@ -30,20 +29,6 @@ const keyEvent = () => {
   });
 };
 
-const sortMessages = (array) => {
-  // if (a > b) {
-  //   return -1;
-  // }
-  // if (a < b) {
-  //   return 1;
-  // }
-  // array.sort((a, b) => b.timestamp - a.timestamp);
-  const sortedArray = array.sort((a, b) => moment(a.timestamp).format('YYYYMMDD') - moment(b.timestamp).format('YYYYMMDD'));
-  console.warn(sortedArray);
-};
-console.warn(sortMessages(seedArray.seedData()));
-
 keyEvent();
-sortMessages(seedArray.seedData());
 
 export default { addNewMessage, keyEvent };
