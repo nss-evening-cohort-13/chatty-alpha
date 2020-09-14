@@ -1,6 +1,7 @@
 import moment from 'moment';
 import seedArray from '../data/_seedMessage';
 import displayMessages from './_displayMessages';
+import userSelection from './_multipleUsers';
 
 const clearOutInput = () => {
   $('#inputNewMessage').val('');
@@ -9,7 +10,8 @@ const clearOutInput = () => {
 const addNewMessage = () => {
   const newMessage = {
     id: seedArray.seedData().length + 1,
-    character: 'ProfFarn$worth9',
+    // character: userSelection.userSelection(),
+    name: userSelection.userSelection(),
     message: $('#inputNewMessage').val(),
     timestamp: moment().format('MMMM Do YYYY, h:mm a'),
   };
