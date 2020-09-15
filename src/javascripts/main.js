@@ -12,7 +12,8 @@ const init = () => {
   displayMessages.displayMessages(seedArray.seedData());
   addMessage.keyEvent();
   clearAllMessages.clearMessages();
-  deleteMessage.deleteMessage(seedArray.seedData());
+  deleteMessage.deleteMessage();
 };
+console.warn(seedArray.seedData());
 
 init();
