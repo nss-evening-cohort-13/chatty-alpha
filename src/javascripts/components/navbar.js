@@ -8,7 +8,7 @@ const renderNavbar = () => {
             </a>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" id ="inputNewMessage" type="text" placeholder="Enter message...">
-                <button class="btn btn-outline-success my-2 my-sm-0" id="btnSubmit" type="button">Enter Message</button>
+                <div id="errorMessage"></div>
                 <button class="btn btn-outline-danger my-2 my-sm-0" type="button" id="clearBtn">Clear</button>
             </form>
         </nav>

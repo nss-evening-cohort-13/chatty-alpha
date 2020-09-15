@@ -6,7 +6,14 @@ const clearOutInput = () => {
   $('#inputNewMessage').val('');
 };
 
-const addNewMessage = () => {
+function addNewMessage(e) {
+  const messageValue = $('#inputNewMessage').val();
+  if (messageValue === '') {
+    $('#errorMessage').html('<p>You must enter a message</p>');
+    e.preventDefault();
+  } else {
+    $('#errorMessage').html('');
+  }
   const newMessage = {
     id: seedArray.seedData().length + 1,
     character: 'ProfFarn$worth9',
@@ -17,7 +24,7 @@ const addNewMessage = () => {
   $('#messages').html('');
   displayMessages.displayMessages(seedArray.seedData());
   clearOutInput();
-};
+}
 
 const keyEvent = () => {
   $('#btnSubmit').click(addNewMessage);
