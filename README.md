@@ -1,5 +1,5 @@
 # Futurama Chat
->> A fun way for Futurama fans to chat as a character from the show!
+> A fun way for Futurama fans to chat as a character from the show!
 
 ## Features
 - Add a new message to the chat board
