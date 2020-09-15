@@ -1,5 +1,4 @@
 import moment from 'moment';
-// import seedArray from '../data/_seedMessage';
 import displayMessages from './_displayMessages';
 
 const clearOutInput = () => {
@@ -19,18 +18,15 @@ const addNewMessage = () => {
   const printNewMessage = [];
   printNewMessage.push(newMessage);
   console.warn(printNewMessage);
-  // const printNewMessage = seedArray.seedData().pop;
+  $('#clearedMssg').html('');
   $('#messages').append(displayMessages.displayMessages(printNewMessage));
   clearOutInput();
 };
 
 const keyEvent = () => {
-  // $('#btnSubmit').click(addNewMessage);
   $('#inputNewMessage').on('keypress', (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
-      // const printNewMessage = seedArray.seedData().pop;
-      // $('#messages').append(displayMessages.displayMessages(printNewMessage));
       addNewMessage();
     }
   });
